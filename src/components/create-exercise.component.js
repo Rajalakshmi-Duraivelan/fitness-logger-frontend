@@ -16,7 +16,7 @@ const CreateExercise = () => {
 
   
   useEffect(() => {
-    axios.get('http://localhost:8000/users/')
+    axios.get('https://fitness-logger-cs3e.onrender.com/users/')
       .then(response => {
         if (response.data.length > 0) {
           setUsers(response.data.map(user => user.username));
@@ -52,7 +52,7 @@ const CreateExercise = () => {
     };
 
     //console.log(exercise);
-    axios.post('http://localhost:8000/exercises/add', exercise)
+    axios.post('https://fitness-logger-cs3e.onrender.com/add', exercise)
     .then(res => console.log(res.data));
 
     navigate('/');

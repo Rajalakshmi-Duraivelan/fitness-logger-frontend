@@ -18,7 +18,7 @@ const ExercisesList = () => {
   const [exercises, setExercises] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:8000/exercises/')
+    axios.get('https://fitness-logger-cs3e.onrender.com/exercises/')
       .then(response => {
         setExercises(response.data)
       })
@@ -28,7 +28,7 @@ const ExercisesList = () => {
   }, []);
 
   const deleteExercise = (id) => {
-    axios.delete('http://localhost:8000/exercises/'+id)
+    axios.delete('https://fitness-logger-cs3e.onrender.com/exercises/'+id)
       .then(response => { console.log(response.data)});
 
     setExercises(exercises.filter(el => el._id !== id));

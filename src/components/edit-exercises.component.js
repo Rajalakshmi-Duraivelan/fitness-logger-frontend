@@ -17,7 +17,7 @@ const EditExercises = () => {
 
   useEffect(() => {
     console.log('UE1');
-    axios.get(`http://localhost:8000/exercises/${id}`)
+    axios.get(`https://fitness-logger-cs3e.onrender.com/${id}`)
       .then(response => {
         console.log('UER');
         setUsername(response.data.username);
@@ -31,7 +31,7 @@ const EditExercises = () => {
         console.log(error);
       });
 
-    axios.get('http://localhost:8000/users/')
+    axios.get('https://fitness-logger-cs3e.onrender.com/users/')
       .then(response => {
         console.log('UEGU');
         if (response.data.length > 0) {
@@ -71,7 +71,7 @@ const EditExercises = () => {
 
     console.log(exercise);
 
-    axios.post(`http://localhost:8000/exercises/update/${id}`, exercise)
+    axios.post(`https://fitness-logger-cs3e.onrender.com/exercises/update/${id}`, exercise)
       .then(res => {
         console.log(res.data);
         navigate('/');
