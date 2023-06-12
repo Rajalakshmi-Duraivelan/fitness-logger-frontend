@@ -52,7 +52,7 @@ const CreateExercise = () => {
     };
 
     //console.log(exercise);
-    axios.post('https://fitness-logger-cs3e.onrender.com/add', exercise)
+    axios.post('https://fitness-logger-cs3e.onrender.com/exercises/add', exercise)
     .then(res => console.log(res.data));
 
     navigate('/');

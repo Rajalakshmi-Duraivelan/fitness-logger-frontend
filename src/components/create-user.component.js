@@ -28,7 +28,7 @@ export default class CreateUser extends Component {
 
     
 
-    axios.post('https://fitness-logger-cs3e.onrender.com/add', user)
+    axios.post('https://fitness-logger-cs3e.onrender.com/users/add', user)
        .then(res => console.log(res.data));
     
     this.setState({
